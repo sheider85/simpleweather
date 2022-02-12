@@ -1,7 +1,7 @@
 {
   "name": "simple-nodejs-weather-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "![gif](https://github.com/bmorelli25/simple-nodejs-weather-app/blob/master/giphy.gif?raw=true 'website gif')",
   "main": "index.js",
   "scripts": {
     "test": "echo \"tut bil error. nam ne nado",
@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/bmorelli25/simple-nodejs-weather-app#readme",
   "dependencies": {
-    "body-parser": "^1.17.2",
+    "body-parser": "^1.19.1",
+    "ejs": "^3.1.6",
     "express": "^4.15.3",
-    "request": "^2.81.0",
-    "ejs": "^3.1.6"
-  }
+    "request": "^2.81.0"
+  },
+  "keywords": [
+    "weather"
+  ]
 }
