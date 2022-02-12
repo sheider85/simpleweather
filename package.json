@@ -4,6 +4,7 @@
   "description": "![gif](https://github.com/bmorelli25/simple-nodejs-weather-app/blob/master/giphy.gif?raw=true 'website gif')",
   "main": "index.js",
   "scripts": {
+    "build": "echo \"Building app...\"",
     "test": "echo \"Error: no test specified\"",
     "start": "node server.js"
   },
