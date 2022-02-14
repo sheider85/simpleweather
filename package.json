@@ -6,7 +6,8 @@
   "scripts": {
     "build": "echo \"Building app...\"",
     "test": "echo \"Error: no test specified\"",
-    "start": "node server.js"
+    "start": "node server.js",
+    "deploy": "echo \"Deploy docker...\""
   },
   "repository": {
     "type": "git",
