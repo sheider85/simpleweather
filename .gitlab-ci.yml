@@ -2,8 +2,14 @@ build:
   stage: build
   script:
     - npm run build
+    - docker build -t test1 -f Dockerfile.test .
 
 test:
   stage: test
   script:
     - npm run test
+
+deploy:
+  stage: deploy
+  script:
+    - docker run -d -p 3000:3000 test1
