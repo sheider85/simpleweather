@@ -13,8 +13,6 @@ services:
   test1:
     image: test1
     container_name: test1
-    depends_on:
-      - proxy
     ports:
       - "3000:3000"
     links:
