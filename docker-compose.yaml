@@ -4,7 +4,7 @@ services:
     image: nginx:latest
     container_name: proxy
     volumes:
-      - 'nginx.conf:/etc/nginx/nginx.conf'
+      - './nginx:/etc/nginx/conf.d'
     ports:
       - '80:80'
     links:
@@ -15,5 +15,3 @@ services:
     container_name: test1
     ports:
       - "3000:3000"
-    links:
-        - proxy
