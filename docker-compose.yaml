@@ -1,14 +1,23 @@
-version: "3.9"
-
+version: '3'
 services:
-
-  nginx:
-    build: ./nginx
-    restart: always
+  proxy:
+    image: nginx:1.21.6
+    container_name: proxy
+    volumes:
+      - './nginx.conf:/etc/nginx/nginx.conf'
     ports:
-        -"80:80"
-
- app:
-  build:
-  expose:
-  restart: always
+      - '80:80'
+    networks:
+      - private-network
+  weather-app:
+    image: weather-app
+    container_name: weather-app
+    build: ./
+    depends_on:
+      - proxy
+    ports:
+      - '3000'
+    networks:
+      - private-network
+networks:
+  private-network:
