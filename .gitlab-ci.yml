@@ -14,4 +14,3 @@ deploy:
   script:
     - docker stop test1 
     - docker rm test1
-    - docker run -p 3000:3000 test1
