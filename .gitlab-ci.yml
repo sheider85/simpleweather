@@ -12,9 +12,9 @@ test:
 deploy:
   stage: deploy
   script:
-    - docker stop test1 
-    - docker rm test1
-    - docker run -d -p 3000:3000 test1
+    # docker stop test1 
+    # docker rm test1
+    # docker run -d -p 3000:3000 test1
     - docker-compose build
     - docker-compose stop
     - docker-compose up -d

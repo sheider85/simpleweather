@@ -1,23 +1,21 @@
 version: '3'
 services:
   proxy:
-    image: nginx:1.21.6
+    image: nginx:latest
     container_name: proxy
     volumes:
-      - './nginx.conf:/etc/nginx/nginx.conf'
+      - 'nginx.conf:/etc/nginx/nginx.conf'
     ports:
       - '80:80'
-    networks:
-      - private-network
-  weather-app:
-    image: weather-app
-    container_name: weather-app
-    build: ./
+    links:
+        - test1
+  
+  test1:
+    image: test1
+    container_name: test1
     depends_on:
       - proxy
     ports:
-      - '3000'
-    networks:
-      - private-network
-networks:
-  private-network:
+      - "3000:3000"
+    links:
+        - proxy
